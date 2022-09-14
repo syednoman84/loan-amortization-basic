@@ -9,11 +9,8 @@ import java.util.List;
 
 @Service
 public class AmortizationScheduleService {
-    public LoanResponseDTO generateSchedule(double originalLoanAmount, double interestRate, int totalYears) {
+    public LoanResponseDTO generateSchedule(double originalLoanAmount, double annualInterestRate, int numYears) {
         double loanAmount = originalLoanAmount;
-        double annualInterestRate = interestRate;
-        int numYears = totalYears;
-
         double monthlyInterestPaid, monthlyPrincipalPaid, newBalance;
         double monthlyInterestRate, monthlyPayment, totalPayment;
         int month;
